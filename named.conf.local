@@ -1,0 +1,7 @@
+include "/etc/bind/rndc.key";
+
+zone "midominio" {
+        type master;
+        file "/var/lib/bind/midominio.hosts";
+        allow-update { key rndc-key; };
+        };
